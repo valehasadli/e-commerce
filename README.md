@@ -24,7 +24,7 @@ This project showcases the power and flexibility of the Blinkhub event emitter i
    
 2. Navigate into the project directory and install dependencies:
     ```bash
-   cd react-blinkhub-demo
+   cd blinkhub-react-example
    ```
    
 3. Run the project:
