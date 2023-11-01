@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import ListenerBox from "./ListenerBox";
 import Search from "./Search";
+import AnotherBox from "./AnotherBox";
 
 const App: React.FC = () => {
     return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
                 <ListenerBox />
                 <ListenerBox />
                 <ListenerBox />
+                <AnotherBox />
             </div>
         </div>
     );
