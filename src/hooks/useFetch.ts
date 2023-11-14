@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 type UseFetchOptions = {
 	method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -12,7 +12,7 @@ type UseFetchReturnType<T> = {
 	error: Error | null;
 };
 
-function useFetch<T>(url: string, options: UseFetchOptions = {}, deps: React.DependencyList = []): UseFetchReturnType<T> {
+function useFetch<T>(url: string, options: UseFetchOptions = {}): UseFetchReturnType<T> {
 	const [data, setData] = useState<T | null>(null);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<Error | null>(null);
@@ -22,7 +22,7 @@ function useFetch<T>(url: string, options: UseFetchOptions = {}, deps: React.Dep
 			setIsLoading(true);
 			try {
 				const response = await fetch(url, {
-					method: options.method || 'GET',
+					method: options.method ?? 'GET',
 					headers: options.headers,
 					body: options.method !== 'GET' && options.body ? JSON.stringify(options.body) : null,
 				});
@@ -41,7 +41,7 @@ function useFetch<T>(url: string, options: UseFetchOptions = {}, deps: React.Dep
 		};
 
 		fetchData();
-	}, [options.body, options.headers, options.method, url]);
+	}, [url, options.method, options.headers, options.body]);
 
 	return { data, isLoading, error };
 }

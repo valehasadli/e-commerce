@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import ProductItem from './ProductItem';
 import useFetch from '@/hooks/useFetch';
 import {Product} from '@/types/Product';
 
 const ProductList: React.FC = () => {
+	const options = useMemo(() => ({
+		method: 'GET' as const,
+		headers: { 'Content-Type': 'application/json' },
+	}), []);
+
 	const {
 		data: products,
 		isLoading,
-		error
-	} = useFetch<Product[]>('http://localhost:8000/products');
+		error,
+	} = useFetch<Product[]>('http://localhost:8000/products', options);
 
 	if (isLoading) return <p>Loading...</p>;
 	if (error) return <p>Error: {error.message}</p>;
