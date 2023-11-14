@@ -1,24 +1,16 @@
-import React from "react";
-import './App.css';
-import ListenerBox from "./ListenerBox";
-import Search from "./Search";
-import AnotherBox from "./AnotherBox";
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from '@/router';
+import Layout from '@/components/Layout/Layout';
 
 const App: React.FC = () => {
     return (
-        <div>
-            <Search />
-            <div className="boxes-container">
-                <ListenerBox />
-                <ListenerBox />
-                <ListenerBox />
-                <ListenerBox />
-                <ListenerBox />
-                <ListenerBox />
-                <AnotherBox />
-            </div>
-        </div>
+        <Router>
+            <Layout>
+                <AppRoutes />
+            </Layout>
+        </Router>
     );
-}
+};
 
 export default App;
