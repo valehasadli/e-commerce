@@ -1,4 +1,4 @@
-# React Blinkhub Demo
+# E-Commerce (Blinkhub)
 
 This project showcases the power and flexibility of the Blinkhub event emitter in a React application. Through this demo, we illustrate how a single event, emitted from one component, can be subscribed to and acted upon by multiple listeners in real-time.
 
