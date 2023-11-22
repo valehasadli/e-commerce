@@ -86,4 +86,4 @@ Feel free to add and remove various items from the basket to see how Blinkhub fa
 
 ## Contributing
 
-Your contributions are always welcome! Please feel free to submit a pull request, open an issue, or provide feedback.
+**Your contributions are always welcome!** Please feel free to submit a pull request, open an issue, or provide feedback.
