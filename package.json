@@ -11,7 +11,7 @@
     "@types/react": "^18.2.32",
     "@types/react-dom": "^18.2.14",
     "autoprefixer": "^10.4.16",
-    "blink-hub": "^0.3.9",
+    "blink-hub": "^0.4.2",
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
